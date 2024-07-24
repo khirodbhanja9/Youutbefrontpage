@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.navbar{
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration-color: black;
+    text-decoration: none;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+.navbar .left{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.navbar .left img{
+    height: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.navbar .right{
+    display: flex;
+    justify-content: end;
+    width: 30%;
+    margin-right: 20px;
+}
+.navbar .mid{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar .mid .s_box{
+    display: flex;
+    border: 1px solid #ccc;
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius: 25px;
+}
+.navbar .mid .s_box input{
+    width: 400px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+.navbar i{
+    font-size:18px;
+    cursor: pointer;
+}
+.navbar .mid #icon{
+    width: 15px;
+    background-color: #b8b7b738;
+    padding: 10px;
+    border-radius: 30px;
+}
+.navbar .right i{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* .navbar i:hover{
+
+    padding: 15px;
+    background-color:rgba(190, 190, 190, 0.623);
+    border-radius: 30px;
+}  */
+
+/* .navbar a:hover{
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color:whitesmoke;
+} */
+
+.sidebar {
+    width: 5%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style: none;
+    align-items: center;
+    text-decoration: none;
+    position: fixed;
+    top: 0;
+    padding-top: 60px;
+} 
+.sidebar a{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar a i{
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: none;
+}
+.sidebar a img{
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+}
+.sidebar a p{
+    font-size:small;
+    color: black;
+    text-decoration: none;
+}
+.upperbar{
+    width: 100%;
+    height:60px;
+    margin-left: 96px;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    background-color: white;
+    overflow-x: auto;
+    display: flex;
+}
+.upperbar::-webkit-scrollbar{
+    display: none;
+}
+.upperbar li{
+    list-style: none;
+}
+
+.upperbar li a{
+
+    display: block;
+    max-width: 100px;
+    height: fit-content;
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+    background-color: rgba(0,0,0,0.05) ;
+    padding: 8px 13px;
+    border-radius: 8px;
+    margin: 5px;
+    font-size:14px;
+    font-weight:450;
+    font-family: "Roboto", sans-serif;
+    white-space: nowrap;
+
+}
+
+.items{   
+    height: auto; 
+    width: 94%;
+    margin-top: 60px;
+    margin-left: 100px;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(5,minmax(250px,1fr));
+}
+
+.items .card{
+    width: 338px;
+    height: 330px ;
+    margin: 0px 16px;
+}
+
+.items .card #thumbnail{
+    height: 189px;
+    width: 100%;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.card .card_info{
+    margin-top: 5px;
+    display: flex;
+}
+
+.card .card_info img{
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    margin-right: 10px;
+}
+
+.card .card_info .info{
+    font-family: "Roboto", sans-serif;
+    margin-top: 3px;
+}
+.card .card_info .info h3{
+    font-size: 16px;
+    font-weight:500;
+    margin-bottom: 5px;
+    color: #0f0f0f;
+}
+.card .card_info .info p{
+    color: #606060;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px 0px;
+} 
+
+
+/* @media screen and (max-width:1520px){
+    
+}
+
+@media screen and (max-width:1880px){
+    
+} */
+@media screen and (max-width:380px){
+    .navbar{
+        height: 10vh;
+    }
+    .navbar i{
+        font-size: 20px;
+    }
+    .navbar .right{
+        margin-right: 10px;
+    }
+    .navbar .right i{
+        padding-left: 10px;
+        padding: 10px;
+
+    }
+    .navbar .mid{
+        justify-content: end;
+    }
+    .navbar .mid #icon{
+        display: none;
+    }
+    .navbar .mid .s_box{
+        border: none;
+    }
+    .navbar .mid .s_box input{
+        display: none;
+    }
+    .upperbar{
+        margin-left: 20px;
+    }
+    .items{
+        margin-left: 0;
+        grid-template-columns: 1fr;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .items .card #thumbnail{
+        width: 290px;
+        height: 163px;
+    }
+    .items .card{
+        width: 307px;
+        height: 303px;
+
+    }
+    .items .card .card_info{
+        margin: 0 5px;
+        padding-top: 5PX;
+    }
+    /* .navbar .left i{
+        display: none;
+    } */
+    .sidebar{
+        width: 0px;
+        display: none;
+    }
+
+}
